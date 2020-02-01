@@ -10,9 +10,6 @@ html, body {
 .text-container {
     text-align: center;
 }
-#text {
-  text-shadow: 4px 4px blue;
-}
 h1 {
     font-size: 3em;
 }
@@ -23,3 +20,21 @@ h1 {
     }
 }
 
+.controls-container {
+    text-align: center;
+    margin: 5em;
+}
+
+.displayCSS {
+    margin: 0, auto;
+    text-align: center;
+}
+
+ .output {
+     display: inline-block;
+     text-align: center;
+     margin: 0, auto;
+     padding: 1em;
+     width: 50%;
+     border: 2px dashed black;
+ }
