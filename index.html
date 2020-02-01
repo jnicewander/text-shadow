@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Text Shadow GUI</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+</head>
+<body>
+    <div class="page-container">
+        <div class="text-container">
+            <h1 class="text" id="text">Sample Text</h1>
+        </div>
+        <div class="controls-container">
+            <div class="number-container">
+                <label for="size">Size of the Text Shadow</label>
+                <input type="number" class="size" id="size" placeholder="Enter a number..." oninput="moveShadow()">
+            </div>
+        </div>
+        <div class="displayCSS">
+            <p class="output" id="output"></p>
+        </div>
+        
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>

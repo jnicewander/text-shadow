@@ -1,0 +1,25 @@
+html, body {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0, auto;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.text-container {
+    text-align: center;
+}
+#text {
+  text-shadow: 4px 4px blue;
+}
+h1 {
+    font-size: 3em;
+}
+
+@media only screen and (min-width: 600px) {
+    h1 {
+        font-size: 6em;
+    }
+}
+
