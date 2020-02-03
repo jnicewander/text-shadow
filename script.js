@@ -1,18 +1,36 @@
-function moveShadow() {
-    // assign user input to size
+// assign user input to variables
+
+
+function shadowSize() {
     const size = document.getElementById("size").value;
- 
-    // build string from size
-    let rawResult = "";
-    for(let i = 0; i <= size; i++) {
-        rawResult += `${i}px ${i}px red, `;
-    };
-    // remove last comma and white space, assign to newResult
-       let newResult = rawResult.substring(0, rawResult.length -2);
-   
-    // set style equal to string in newResult 
-   document.getElementById("text").style.textShadow = newResult;
+    const color = document.getElementById("color").value;  
+    const direction = document.getElementById("range").value;
+    let hNeg = "";
+    let vNeg = "";
+
+    let sizeResult = "";
+
     
-    // output CSS for user to copy
+    for (let i = 0; i <= size; i++) {
+        if (direction == 1){
+            hNeg = "";
+            vNeg = "";
+        } else if (direction == 2) {
+            hNeg = "-";
+            vNeg = "";
+        } else if (direction == 3) {
+            hNeg = "-";
+            vNeg = "-";
+        } else {
+            hNeg = "";
+            vNeg = "-";
+        }
+        sizeResult += `${hNeg}${i}px ${vNeg}${i}px ${color}, `;
+    };
+    
+    
+    let newResult = sizeResult.substring(0, sizeResult.length -2);
+    document.getElementById("text").style.textShadow = newResult;
     document.getElementById("output").innerHTML = newResult;
-}
+    return newResult;
+};
