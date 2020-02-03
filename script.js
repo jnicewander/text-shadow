@@ -1,43 +1,61 @@
+const shadow = {
+    size: function() {
+        const size = document.getElementById('size').value;
+        return size;
+    },
+    color: function() {
+        const color = document.getElementById('color').value;
+        return color;
+    },
+    direction: function() {
+        const direction = document.getElementById('direction').value;
+        return direction; 
+    },
+    xNegative: function() {
+        if (this.direction() == 2 | this.direction() == 3) {
+            return "-";
+        } else {
+            return "";
+        };
+    },
+    yNegative: function() {
+        if (this.direction() == 3 | this.direction() == 4) {
+            return "-";
+        } else {
+            return "";
+        };
+    }
+};
+
 function textCTRL() {
     let userText = document.getElementById("textCTRL").value;
     let displayText = document.getElementById("text");
-    
-    displayText.innerHTML = userText;
-
-}
-
-function moveShadow() {
-    // assign user input to size
-    const size = document.getElementById("size").value;
-    const color = document.getElementById('color').value;
-    const direction = document.getElementById('direction').value;
-    // build string from size
-    let rawResult = "";
-    
-    if (direction == 1) {
-        for (let i = 0; i <= size; i++) {
-            rawResult += `${i}px ${i}px ${color}, `;
-        };
-    } else if (direction == 2) {
-        for (let i = 0; i <= size; i++) {
-            rawResult += `-${i}px ${i}px ${color}, `;
-        };
-    } else if (direction == 3) {
-        for (let i = 0; i <= size; i++) {
-            rawResult += `-${i}px -${i}px ${color}, `;
-        };
+    if (userText.length == 0) {
+        displayText.innerHTML = "Sample Text."
     } else {
-        for (let i = 0; i <= size; i++) {
-            rawResult += `${i}px -${i}px ${color}, `;
-        };
+        displayText.innerHTML = userText;
+    }
+};
+
+
+function buildShadow() {
+    // assign user inputs
+    const size = shadow.size();
+    const color = shadow.color();
+    const xNegative = shadow.xNegative();
+    const yNegative = shadow.yNegative();
+    let rawResult = "";
+
+    for (let i = 0; i <= size; i++) {
+        rawResult += `${xNegative}${i}px ${yNegative}${i}px ${color}, `;
     };
     
-    // remove last comma and white space, assign to newResult
-       let newResult = rawResult.substring(0, rawResult.length -2);
+    let newResult = rawResult.substring(0, rawResult.length -2);
    
     // set style equal to string in newResult 
-   document.getElementById("text").style.textShadow = newResult;
+    document.getElementById("text").style.textShadow = newResult;
     
     // output CSS for user to copy
     document.getElementById("output").innerHTML = newResult;
-}
+};
+
