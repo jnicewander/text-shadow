@@ -17,15 +17,15 @@
         <div class="controls-container">
             <div class="number-container">
                 <label for="size">Size of the Text Shadow</label>
-                <input type="number" class="text-input" id="size" placeholder="Enter a number..." oninput="moveShadow()">
+                <input type="number" value="15" class="text-input" id="size" placeholder="Enter a number..." oninput="buildShadow()">
             </div>
             <div class="color-container">
                 <label for="color">Color of the Text Shadow</label>
-                <input type="text" value="#008080" class="text-input" id="color" placeholder="Enter a valid CSS color" oninput="moveShadow()">
+                <input type="text" value="#008080" class="text-input" id="color" placeholder="Enter a valid CSS color" oninput="buildShadow()">
             </div>
             <div class="color-container">
                 <label for="direction">Change the direction of the Text Shadow</label>
-                <input type="range" class="slider" id="direction" min="1" max="4" value="1" oninput="moveShadow()">
+                <input type="range" class="slider" id="direction" min="1" max="4" value="1" oninput="buildShadow()">
             </div>
         </div>
         <div class="displayCSS">
