@@ -14,9 +14,17 @@
             <h1 class="text" id="text">Sample Text</h1>
         </div>
         <div class="controls-container">
-            <div class="number-container">
+            <div class="size-container">
                 <label for="size">Size of the Text Shadow</label>
-                <input type="number" class="size" id="size" placeholder="Enter a number..." oninput="moveShadow()">
+                <input type="number" class="text-input" id="size" placeholder="Enter a number..." oninput="shadowSize()">
+            </div>
+            <div class="color-container">
+                <label for="color-picker">Color of the Text Shadow</label>
+                <input type="text" class="text-input" id="color" placeholder="Enter a valid CSS color value.." oninput="shadowSize()">
+            </div>
+            <div class="angle-container">
+                <label for="direction">Change the direction of the Text Shadow</label>
+                <input type="range" min="1" max="4" value="1" class="slider" id="range" oninput="shadowSize()">
             </div>
         </div>
         <div class="displayCSS">
