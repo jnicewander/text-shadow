@@ -5,7 +5,12 @@ const shadow = {
     },
     color: function() {
         const color = document.getElementById('color').value;
-        return color;
+        let colorArray = color.split(' ');
+        if (colorArray.length > 1) {
+            return colorArray;
+        } else {
+            return color;
+        }
     },
     direction: function() {
         const direction = document.getElementById('direction').value;
@@ -37,7 +42,6 @@ function textCTRL() {
     }
 };
 
-
 function buildShadow() {
     // assign user inputs
     const size = shadow.size();
@@ -46,18 +50,24 @@ function buildShadow() {
     const yNegative = shadow.yNegative();
     let rawResult = "";
 
-    for (let i = 0; i <= size; i++) {
-        rawResult += `${xNegative}${i}px ${yNegative}${i}px ${color}, `;
-    };
-    
+    // if (color.length > 1) {
+    //     let divisible = size / color.length;
+    //     for(let j = 0; j >= size; j++) {
+    //         rawResult += `${xNegative}${i}px ${yNegative}${i}px ${color}, `;
+    //         size--;
+    //         return rawResult;
+    //     }
+    // } else {
+        for (let i = 0; i <= size; i++) {
+            rawResult += `${xNegative}${i}px ${yNegative}${i}px ${color}, `;
+        }
+        return rawResult;
+}
+
+
+function formatShadow() {
+    let rawResult = buildShadow();
     let newResult = rawResult.substring(0, rawResult.length -2);
-   
-    // set style equal to string in newResult 
-    document.getElementById("text").style.textShadow = newResult;
-    
-    
-    let newResult = sizeResult.substring(0, sizeResult.length -2);
     document.getElementById("text").style.textShadow = newResult;
     document.getElementById("output").innerHTML = newResult;
 };
-
