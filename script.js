@@ -28,15 +28,22 @@ const shadow = {
     }
 };
 
-function textCTRL() {
-    let userText = document.getElementById("textCTRL").value;
-    let displayText = document.getElementById("text");
-    if (userText.length == 0) {
-        displayText.innerHTML = "Sample Text."
-    } else {
-        displayText.innerHTML = userText;
+sampleText = {
+    replace: function textCTRL() {
+        let userText = document.getElementById('textCTRL').value;
+        let displayText = document.getElementById('text');
+        if (userText.length == 0) {
+            displayText.innerHTML = "Sample Text."
+        } else {
+            displayText.innerHTML = userText;
+        }
+    },
+    color: function() {
+        let color = document.getElementById('textColor').value;
+        document.getElementById('text').style.color = color;
     }
-};
+
+}
 
 function buildShadow() {
     // assign user inputs
