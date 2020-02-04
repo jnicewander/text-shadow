@@ -5,12 +5,8 @@ const shadow = {
     },
     color: function() {
         const color = document.getElementById('color').value;
-        let colorArray = color.split(' ');
-        if (colorArray.length > 1) {
-            return colorArray;
-        } else {
-            return color;
-        }
+        let colorArray = color.split('+');
+        return colorArray;
     },
     direction: function() {
         const direction = document.getElementById('direction').value;
@@ -49,19 +45,14 @@ function buildShadow() {
     const xNegative = shadow.xNegative();
     const yNegative = shadow.yNegative();
     let rawResult = "";
-
-    // if (color.length > 1) {
-    //     let divisible = size / color.length;
-    //     for(let j = 0; j >= size; j++) {
-    //         rawResult += `${xNegative}${i}px ${yNegative}${i}px ${color}, `;
-    //         size--;
-    //         return rawResult;
-    //     }
-    // } else {
+    let counter = 0;
+    for (let j = 0; j < color.length; j++) {
         for (let i = 0; i <= size; i++) {
-            rawResult += `${xNegative}${i}px ${yNegative}${i}px ${color}, `;
+            counter++;
+            rawResult += `${xNegative}${counter}px ${yNegative}${counter}px ${color[j]}, `;
         }
-        return rawResult;
+    }
+    return rawResult;
 }
 
 
