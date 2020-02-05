@@ -1,7 +1,8 @@
 const shadow = {
     size: function() {
         const size = document.getElementById('size').value;
-        return size;
+        let sizeArray = size.split('+');
+        return sizeArray;
     },
     color: function() {
         const color = document.getElementById('color').value;
@@ -53,13 +54,23 @@ function buildShadow() {
     const yNegative = shadow.yNegative();
     let rawResult = "";
     let counter = 0;
-    for (let j = 0; j < color.length; j++) {
-        for (let i = 0; i <= size; i++) {
-            counter++;
-            rawResult += `${xNegative}${counter}px ${yNegative}${counter}px ${color[j]}, `;
-        }
-    }
+debugger;
+    color.forEach((color, pos) => {  // blue, red, yellow
+
+        let currentColor = `${color}`;
+        let currentPos = pos;
+        size.forEach((size, numPos) => {
+            if (currentPos == numPos) {
+                for (let i = 0; i < size; i++) {
+                    counter++;
+                    rawResult += `${xNegative}${counter}px ${yNegative}${counter}px ${currentColor}, `;
+                }
+            }
+        });
+    });
     return rawResult;
+    
+    
 }
 
 
@@ -67,5 +78,5 @@ function formatShadow() {
     let rawResult = buildShadow();
     let newResult = rawResult.substring(0, rawResult.length -2);
     document.getElementById("text").style.textShadow = newResult;
-    document.getElementById("output").innerHTML = newResult;
+    document.getElementById("output").innerHTML = "text-shadow: " + newResult + ";";
 };
