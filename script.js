@@ -54,7 +54,6 @@ function buildShadow() {
     const yNegative = shadow.yNegative();
     let rawResult = "";
     let counter = 0;
-debugger;
     color.forEach((color, pos) => {  // blue, red, yellow
 
         let currentColor = `${color}`;
