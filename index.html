@@ -5,35 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Text Shadow GUI</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
     
 </head>
 <body>
     <div class="page-container">
-        
-        <div class="text-container">
-            <h1 class="text" id="text">Sample Text</h1>
-            <input type="text" class="text-control text-input" id="textCTRL" placeholder="Change the Sample Text" oninput="sampleText.replace()">
-            <input type="text" class="text-control text-input" id="textColor" placeholder="Change the color of the Sample Text" oninput="sampleText.color()">
+        <div class="title">
+            <h1 class="main-heading">3D Text-Shadow Generator</h1>
         </div>
-
-        <div class="controls-container">
-            <div class="size-container">
-                <label for="size">Size of the Text Shadow</label>
-                <input type="text" value="15" class="text-input" id="size" placeholder="Enter a number..." oninput="formatShadow()">
+        <div class="flex">
+            <div class="text-container">
+                <h1 class="text" id="text">Sample Text</h1>
             </div>
-            <div class="color-container">
-                <label for="color">Color(s) of the Text Shadow</label>
-                <input type="text" value="#008080" class="text-input" id="color" placeholder="Enter valid CSS colors separated by a + symbol" oninput="formatShadow()">
-            </div>
-            <div class="color-container">
-                <label for="direction">Change the direction of the Text Shadow</label>
-                <input type="range" class="slider" id="direction" min="1" max="4" value="1" oninput="formatShadow()">
-            </div>
+            
+            <form class="controls-container">
+                <div class="row">
+                    <label for="textCTRL">Customize Sample Text</label>
+                    <input type="text" class="text-control text-input" id="textCTRL" oninput="sampleText.replace()">
+                </div>
+                <div class="row">
+                    <label for="textColor">Change Sample Text Color</label>
+                    <input type="text" class="text-control text-input" id="textColor" oninput="sampleText.color()">
+                </div>
+                <div class="row">
+                    <label for="size">Size of the Text Shadow</label>
+                    <input type="text" value="15" class="text-input" id="size" placeholder="Enter a number..." oninput="formatShadow()">
+                </div>
+                <div class="row">
+                    <label for="color">Color(s) of the Text Shadow</label>
+                    <input type="text" value="#008080" class="text-input" id="color" placeholder="Enter valid CSS colors separated by a + symbol" oninput="formatShadow()">
+                </div>
+                <div class="row">
+                    <label for="direction">Change the direction of the Text Shadow</label>
+                    <input type="range" class="slider" id="direction" min="1" max="4" value="1" oninput="formatShadow()">
+                </div>
+            </form>
         </div>
         <div class="displayCSS">
-            <h2>Copy this code and paste in your css text-shadow property...</h2>
-            <p class="output" id="output"></p>
+            <div class="row">
+                <h2>Copy this code and paste in your css text-shadow property...</h2>
+                <code class="output" id="output"></code>
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
