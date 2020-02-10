@@ -1,4 +1,7 @@
-@import 'base';
+@import 'abstracts/variables';
 
-@import 'layout';
+@import 'base/base';
+
+@import 'components/code';
+@import 'components/sample';
 

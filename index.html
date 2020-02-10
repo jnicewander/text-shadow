@@ -10,49 +10,50 @@
     
 </head>
 <body>
-    <div class="page-container text-center">
-        <div class="container-fluid">
+    <div class="container text-center">
 
-            <div class="page-header">
-                <h1 class="">3D Text-Shadow Generator</h1>
+            <div class="page-header">    
+                <h1 class="sample-text" id="text">3D Text-Shadow Generator</h1>
                 <p>Generate the css code for long 3-dimensional text-shadows</p>
             </div>
-    
-            <div class="row">
-                <div class="col-md-6 my-auto">
-                    <h1 class="display-1" id="text">Sample Text</h1>
+
+                <div class="row">
+                    <form class="col-md-6">
+                        <h2 class="card-title">Controls</h2>
+                        <div class="form-group">
+                            <label for="textCTRL">Custom Sample Text</label>
+                            <input type="text" class="form-control form-control-small" id="textCTRL" oninput="sampleText.replace()">
+                        </div>
+                        <div class="form-group">
+                            <label for="textColor">Text Color</label>
+                            <small class="form-text text-muted">Use any valid css color</small>
+                            <input type="text" class="form-control form-control-small" id="textColor" oninput="sampleText.color()">
+                        </div>
+                        <div class="form-group">
+                            <label for="color">Color(s)</label>
+                            <small class="form-text text-muted">Enter valid css colors separated by a '+'</small>
+                            <input type="text" value="#008080" class="form-control form-control-small" id="color" oninput="formatShadow()">
+                        </div>
+                        <div class="form-group">
+                            <label for="size">Size(s)</label>
+                            <small class="form-text text-muted">Enter one size for each color separated by a '+'</small>
+                            <input type="text" value="15" class="form-control form-control-small" id="size" oninput="formatShadow()">
+                        </div>
+                        <div class="form-group">
+                            <label for="direction">Change the direction of the Text Shadow</label>
+                            <input type="range" class="slider form-control-range" id="direction" min="1" max="4" value="1" oninput="formatShadow()">
+                        </div>
+                    </form>
+                    <div class="col-md-6">
+                        <div class="">
+                            <h2>Copy this code and paste in your css text-shadow property...</h2>
+                            <div class="container code">
+                                <code id="output">text-shadow: 15px 15px #008080;</code>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                <form class="col-md-6 row">
-                    <div class="form-group">
-                        <label for="textCTRL">Customize Sample Text</label>
-                        <input type="text" class="text-control text-input" id="textCTRL" oninput="sampleText.replace()">
-                    </div>
-                    <div class="form-group">
-                        <label for="textColor">Change Sample Text Color</label>
-                        <input type="text" class="text-control text-input" id="textColor" oninput="sampleText.color()">
-                    </div>
-                    <div class="form-group">
-                        <label for="size">Size of the Text Shadow</label>
-                        <input type="text" value="15" class="text-input" id="size" placeholder="Enter a number..." oninput="formatShadow()">
-                    </div>
-                    <div class="form-group">
-                        <label for="color">Color(s) of the Text Shadow</label>
-                        <input type="text" value="#008080" class="text-input" id="color" placeholder="Enter valid CSS colors separated by a + symbol" oninput="formatShadow()">
-                    </div>
-                    <div class="form-group">
-                        <label for="direction">Change the direction of the Text Shadow</label>
-                        <input type="range" class="slider" id="direction" min="1" max="4" value="1" oninput="formatShadow()">
-                    </div>
-                </form>
-            </div>
-            <div class="">
-                <div class="">
-                    <h2>Copy this code and paste in your css text-shadow property...</h2>
-                    <code class="" id="output"></code>
-                </div>
-            </div>
-        </div>
+            
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
