@@ -1,3 +1,10 @@
+.flexbox-code {
+    text-align: center;
+    background: rgba($dark-grey, .5);
+    box-shadow: 1px 1px 3px $black;
+}
+
 .code {
+    padding: .5rem;
     background: $dark-grey;
 }

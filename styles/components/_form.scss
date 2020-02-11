@@ -1,0 +1,12 @@
+.flexbox-form {
+    background: rgba($dark-grey, .5);
+    box-shadow: 1px 1px 3px $black;
+}
+
+input {
+    color: $white;
+    padding: .5rem;
+    border-radius: 4px;
+    border: 2px solid rgba($dark-grey, .5);
+    background-color: $light-blue; 
+}

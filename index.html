@@ -5,65 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Text Shadow GUI</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     
 </head>
 <body>
-    <div class="container text-center">
+    <div class="page-wrapper">
 
-            <div class="page-header">    
-                <h1 class="sample-text" id="text">3D Text-Shadow Generator</h1>
-                <p>Generate the css code for long 3-dimensional text-shadows</p>
-            </div>
+        <header class="main-heading">    
+            <h1 class="sample-text" id="text">3D Text-Shadow Generator</h1>
+            <p class="highlight">Easily Generate The CSS Code For 3D Text-Shadows Using Any Valid CSS Color!</p>
+        </header>
 
-                <div class="row">
-                    <form class="col-md-6">
-                        <h2 class="card-title">Controls</h2>
-                        <div class="form-group">
-                            <label for="textCTRL">Custom Sample Text</label>
-                            <input type="text" class="form-control form-control-small" id="textCTRL" oninput="sampleText.replace()">
-                        </div>
-                        <div class="form-group">
-                            <label for="textColor">Text Color</label>
-                            <small class="form-text text-muted">Use any valid css color</small>
-                            <input type="text" class="form-control form-control-small" id="textColor" oninput="sampleText.color()">
-                        </div>
-                        <div class="form-group">
-                            <label for="color">Color(s)</label>
-                            <small class="form-text text-muted">Enter valid css colors separated by a '+'</small>
-                            <input type="text" value="#008080" class="form-control form-control-small" id="color" oninput="formatShadow()">
-                        </div>
-                        <div class="form-group">
-                            <label for="size">Size(s)</label>
-                            <small class="form-text text-muted">Enter one size for each color separated by a '+'</small>
-                            <input type="text" value="15" class="form-control form-control-small" id="size" oninput="formatShadow()">
-                        </div>
-                        <div class="form-group">
-                            <label for="direction">Change the direction of the Text Shadow</label>
-                            <input type="range" class="slider form-control-range" id="direction" min="1" max="4" value="1" oninput="formatShadow()">
-                        </div>
-                    </form>
-                    <div class="col-md-6">
-                        <div class="">
-                            <h2>Copy this code and paste in your css text-shadow property...</h2>
-                            <div class="container code">
-                                <code id="output">text-shadow: 15px 15px #008080;</code>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="flexbox">
+            <form class="flexbox-form">
+                <h2>Controls</h2>
+                <ul class="flexbox-outer">
+                    <li>
+                        <label for="textCTRL">Custom Text</label>
+                        <input type="text" value="3D Text-Shadow Generator" id="textCTRL" oninput="sampleText.replace()">
+                    </li>
+                    <li>
+                        <label for="textColor">Text Color</label>
+                        <input type="text" value="white" id="textColor" oninput="sampleText.color()">
+                    </li>
+                    <li>
+                        <label for="color">Color(s)</label>
+                        <input type="text" value="#FF5733+rgb(199, 0, 57)+hsl(318, 73%, 22%)+black" id="color" oninput="formatShadow()">
+                    </li>
+                    <li>
+                        <label for="size">Size(s)</label>
+                        <input type="text" value="15" id="size" oninput="formatShadow()">
+                    </li>
+                    <li>
+                        <label for="direction" class="">Direction</label>
+                        <input type="range" id="direction" min="1" max="4" value="1" oninput="formatShadow()">
+                    </li>
+                </ul>
+            </form>
             
+            <div class="flexbox-code">
+                <h2>Copy this code...</h2>
+                <div class="code">
+                    <code id="output">text-shadow: 1px 1px #008080, 2px 2px #008080, 3px 3px #008080, 4px 4px #008080, 5px 5px #008080, 6px 6px #008080, 7px
+                    7px #008080, 8px 8px #008080, 9px 9px #008080, 10px 10px #008080, 11px 11px #008080, 12px 12px #008080, 13px 13px
+                    #008080, 14px 14px #008080, 15px 15px #008080;</code>
+                </div>    
+            </div>
+        </div>
+        <footer class="main-footer">
+            <p>3D Text-Shadow Generator created by <a href="https://jnicewander.github.io/">Justin Nicewander</a>. &copy;2020</p>
+        </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
