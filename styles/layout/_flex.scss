@@ -1,4 +1,12 @@
+// Sticky Footer Setup
+.flexbox-vertical {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
 .flexbox {
+    flex: 1; // Sticky Footer cont.
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;

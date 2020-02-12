@@ -400,7 +400,7 @@ input {
   color: white;
   padding: .5rem;
   border-radius: 4px;
-  border: 2px solid rgba(64, 64, 64, 0.5);
+  border: 2px solid rgba(64, 64, 64, 0.5), 2px solid white;
   background-color: #1a444d;
 }
 
@@ -409,7 +409,21 @@ input {
   text-align: center;
 }
 
+.flexbox-vertical {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .flexbox {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -497,10 +511,9 @@ input {
 }
 
 .main-footer {
-  text-align: center;
-  margin-top: 1rem;
   padding: 1rem 1rem 1rem 1rem;
   width: 100vw;
+  text-align: center;
   background: rgba(64, 64, 64, 0.5);
 }
 /*# sourceMappingURL=styles.css.map */
