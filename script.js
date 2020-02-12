@@ -104,29 +104,21 @@ const toolTips = {
     shadowColor: {
         add: function() {
             let shadowColor = document.getElementById("shadowColorHint");
-            let shadowColor2 = document.getElementById("shadowColorHint2");
             shadowColor.style.display="block";
-            shadowColor2.style.display = "block";
         },
         remove: function() {
             let shadowColor = document.getElementById("shadowColorHint");
-            let shadowColor2 = document.getElementById("shadowColorHint2");
             shadowColor.style.display="none";
-            shadowColor2.style.display = "none";
         }
     },
     size: {
         add: function() {
             let size = document.getElementById("sizeHint");
-            let size2 = document.getElementById("sizeHint2");
             size.style.display="block";
-            size2.style.display = "block";
         },
         remove: function() {
             let size = document.getElementById("sizeHint");
-            let size2 = document.getElementById("sizeHint2");
             size.style.display ="none";
-            size2.style.display = "none";
         }
     },
 

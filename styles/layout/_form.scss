@@ -29,13 +29,12 @@
             flex: 1 0 160px; 
         }
 
-    }
-    div {
-        text-align: center;
-
         small {
-            display: none;
+            position: absolute;
+            margin: 5rem 0 0 10rem;
+            flex: 1 0 160px;
         }
+
     }
     
 }

@@ -404,6 +404,15 @@ input {
   background-color: #1a444d;
 }
 
+small {
+  text-align: center;
+  -webkit-box-shadow: 1px 1px 4px black;
+          box-shadow: 1px 1px 4px black;
+  padding: .5rem;
+  background: #404040;
+  display: none;
+}
+
 .main-heading {
   margin: 0 auto;
   text-align: center;
@@ -510,12 +519,12 @@ input {
           flex: 1 0 160px;
 }
 
-.flexbox-outer div {
-  text-align: center;
-}
-
-.flexbox-outer div small {
-  display: none;
+.flexbox-outer li small {
+  position: absolute;
+  margin: 5rem 0 0 10rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 160px;
+          flex: 1 0 160px;
 }
 
 .main-footer {
