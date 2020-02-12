@@ -18,22 +18,38 @@
         <form class="flexbox-form">
             <h2>Controls</h2>
             <ul class="flexbox-outer">
+
+                <!-- Add onfocus="" && onBlur="" to each control to show and hide tooltip -->
                 <li>
                     <label for="textCTRL">Custom Text</label>
-                    <input type="text" value="3D Text-Shadow Generator" id="textCTRL" oninput="sampleText.replace()">
+                    <input type="text" value="3D Text-Shadow Generator" id="textCTRL" onfocus="toolTips.customText.add()" onblur="toolTips.customText.remove()" oninput="sampleText.replace()">
                 </li>
+                <div>
+                    <small class="hidden" id="customTextHint">Changes the title at the top of the screen</small>
+                </div>
                 <li>
                     <label for="textColor">Text Color</label>
-                    <input type="text" value="white" id="textColor" oninput="sampleText.color()">
+                    <input type="text" value="white" id="textColor" onfocus="toolTips.textColor.add()" onblur="toolTips.textColor.remove()" oninput="sampleText.color()">
                 </li>
+                <div>
+                    <small class="hidden" id="textColorHint">Changes the font color of the title</small>
+                </div>
                 <li>
                     <label for="color">Color(s)</label>
-                    <input type="text" value="#FF5733+rgb(199, 0, 57)+hsl(318, 73%, 22%)+black" id="color" oninput="formatShadow()">
+                    <input type="text" value="#FF5733+rgb(199, 0, 57)+hsl(318, 73%, 22%)+black" id="color" onfocus="toolTips.shadowColor.add()" onblur="toolTips.shadowColor.remove()" oninput="formatShadow()">
                 </li>
+                <div>
+                    <small class="hidden" id="shadowColorHint">Enter any valid css color separated with a "+"</small>
+                    <small class="hidden" id="shadowColorHint2">(ex. "red + lightgrey + #fff")</small>
+                </div>
                 <li>
                     <label for="size">Size(s)</label>
-                    <input type="text" value="3+3+3+1" id="size" oninput="formatShadow()">
+                    <input type="text" value="3+3+3+1" id="size" onfocus="toolTips.size.add()" onblur="toolTips.size.remove()" oninput="formatShadow()">
                 </li>
+                <div>
+                    <small class="hidden" id="sizeHint">Enter one value for each color entered separated by a "+"</small>
+                    <small class="hidden" id="sizeHint2">(ex. "3+6+4+2")</small>
+                </div>
                 <li>
                     <label for="direction" class="">Direction</label>
                     <input type="range" id="direction" min="1" max="4" value="1" oninput="formatShadow()">

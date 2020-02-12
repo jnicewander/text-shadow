@@ -510,6 +510,14 @@ input {
           flex: 1 0 160px;
 }
 
+.flexbox-outer div {
+  text-align: center;
+}
+
+.flexbox-outer div small {
+  display: none;
+}
+
 .main-footer {
   padding: 1rem 1rem 1rem 1rem;
   width: 100vw;

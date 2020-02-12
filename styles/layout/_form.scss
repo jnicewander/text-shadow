@@ -7,8 +7,9 @@
 
 .flexbox-outer {
     padding: 0 1.5rem;
+    
 
-    li {
+    li {        
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -29,4 +30,12 @@
         }
 
     }
+    div {
+        text-align: center;
+
+        small {
+            display: none;
+        }
+    }
+    
 }
