@@ -10,3 +10,7 @@ input {
     border: 2px solid rgba($dark-grey, .5), 2px solid white;
     background-color: $light-blue; 
 }
+
+input:focus {
+    box-shadow: 0 0 5px rgba($white, .5);
+}
