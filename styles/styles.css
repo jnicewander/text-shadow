@@ -536,7 +536,6 @@ small {
 
 .main-footer {
   padding: .5rem 1rem .5rem 1rem;
-  width: 100vw;
   text-align: center;
   background: rgba(64, 64, 64, 0.5);
 }
