@@ -126,11 +126,15 @@ const toolTips = {
 
 
 function copyText() {
-    const copyText = document.getElementById('output');
+    const copyText = document.getElementById('output').textContent;
+    const textArea = document.createElement('textarea');
+    textArea.textContent = copyText
+    document.body.append(textArea);
 
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
+    textArea.select();
+    textArea.setSelectionRange(0, 99999);
     
+
     document.execCommand("copy");
-    alert('Text copied to clipboard!')
-}
+    alert('Text copied to clipboard!');
+};
