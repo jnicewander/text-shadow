@@ -409,6 +409,7 @@ small {
 }
 
 .main-heading .highlight {
+  margin: 0;
   padding: 1rem .5rem;
   background-color: rgba(64, 64, 64, 0.5);
 }
@@ -439,7 +440,7 @@ small {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-top: 1rem;
+  margin-top: 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

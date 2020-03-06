@@ -6,8 +6,8 @@
 }
 
 .flexbox {
-    flex: 1; // Sticky Footer cont.
-    margin-top: 1rem;
+    flex: 1; // This Line required for sticky footer
+    margin-top: 0rem;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
