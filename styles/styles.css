@@ -450,7 +450,6 @@ textarea {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-top: 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -462,7 +461,13 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 1rem;
+  height: 100%;
+}
+
+@media only screen and (min-width: 640px) {
+  .flexbox {
+    padding: 0 4rem;
+  }
 }
 
 .flexbox-form {
