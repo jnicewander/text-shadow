@@ -2,3 +2,10 @@
     margin-bottom: 1rem;
     padding: .5rem;
 }
+
+// Textarea created to use document.execCommand('copy'); 
+
+textarea {
+    position: absolute;
+    left: -100%;
+}
