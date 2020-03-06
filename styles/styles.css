@@ -402,6 +402,11 @@ small {
   display: none;
 }
 
+.btn {
+  margin-bottom: 1rem;
+  padding: .5rem;
+}
+
 .main-heading {
   margin: 0 auto;
   padding: 0rem 2rem;
