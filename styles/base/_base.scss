@@ -8,5 +8,8 @@ html, body {
 
 body {
     min-height: 100vh;
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
     background: $gradient-blue;
+
 }

@@ -353,7 +353,11 @@ html, body {
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, rgba(19, 176, 223, 0.26) 0%, rgba(19, 176, 223, 0.26) 23%, rgba(16, 160, 197, 0.26) 23%, rgba(16, 160, 197, 0.26) 65%, rgba(13, 144, 172, 0.26) 65%, rgba(13, 144, 172, 0.26) 70%, rgba(9, 129, 146, 0.26) 70%, rgba(9, 129, 146, 0.26) 74%, rgba(6, 113, 121, 0.26) 74%, rgba(6, 113, 121, 0.26) 90%, rgba(3, 97, 95, 0.26) 90%, rgba(3, 97, 95, 0.26) 100%), linear-gradient(45deg, rgba(65, 234, 230, 0.26) 0%, rgba(65, 234, 230, 0.26) 28%, rgba(88, 192, 215, 0.26) 28%, rgba(88, 192, 215, 0.26) 55%, rgba(110, 150, 201, 0.26) 55%, rgba(110, 150, 201, 0.26) 66%, rgba(133, 107, 186, 0.26) 66%, rgba(133, 107, 186, 0.26) 80%, rgba(155, 65, 172, 0.26) 80%, rgba(155, 65, 172, 0.26) 85%, rgba(178, 23, 157, 0.26) 85%, rgba(178, 23, 157, 0.26) 100%), linear-gradient(90deg, #1bc2f6 0%, #1bc2f6 6%, #27aeed 6%, #27aeed 32%, #329be5 32%, #329be5 40%, #3e87dc 40%, #3e87dc 66%, #4a74d3 66%, #4a74d3 72%, #5660ca 72%, #5660ca 86%, #614dc2 86%, #614dc2 96%, #6d39b9 96%, #6d39b9 100%);
+  background: #bdc3c7;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#2c3e50), to(#bdc3c7));
+  background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
 }
 
 html {
